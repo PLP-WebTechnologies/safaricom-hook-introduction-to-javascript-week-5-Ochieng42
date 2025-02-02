@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js functions and controls</title>
+</head>
+<body>
+    <div id="greeting"></div>
+    <div id="eligibility"></div>
+    <ol id="number"></ol>
+    <script>
+        function greetVoter(voter){
+            return`hello ${voter}`;
+        }
+        let userName=prompt("enter your name please");
+        document.getElementById("greeting").textContent=greetVoter(userName);
+        let userAge=prompt("enter your age");
+        let eligibilityMessage;
+        if (userAge >=18){
+            eligibilityMessage="you are elligible to vote !!";
+        }else{
+            eligibilityMessage="your NOT eligible to vote!!";
+        }
+        document.getElementById("eligibility").textContent=eligibilityMessage;
+        let numberlist=document.getElementById("number");
+        for(i=1;i<=10;i++){
+            let listItem=document.createElement("li");
+            listItem.textContent=i;
+            numberlist.appendChild(listItem);
+        }
+
+    </script>
+    
+</body>
+</html>

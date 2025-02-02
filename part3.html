@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js DOM</title>
+</head>
+<body>
+    <h1>Javascript Assignment</h1>
+    <p>Learning Javacript is fun</p>
+    <div id="dynamic-content"></div>
+    <button id="change">tap to effect javascript</button>
+    <script>
+        let Button=document.getElementById("change");
+        change.addEventListener("click",function(){
+        let heading=document.querySelector("h1");
+        heading.textContent="Javacript in Action";
+        let dynamicContent=document.getElementById("dynamic-content");
+        let newParagraph=document.createElement("p");
+        newParagraph.textContent="This Content Was Added Dynamically By Javascript";
+        dynamicContent.appendChild(newParagraph);
+        })
+    </script>
+    <style>
+        h1,div,p,button{
+            text-align: justify;
+            margin: 1px;
+            padding: 20px;
+            border: solid blanchedalmond;
+            border-radius: 15px;
+
+        }
+        button{
+            text-align: center;
+            color: cornflowerblue;
+            background-color: brown;
+            border: 100vh;
+            border-radius: 20px;
+            margin: 10px;
+            font-size: medium;
+            font-weight: 500;
+            padding: 10px 20px;
+            display: block;
+            transition:background-color 0.3s ease;
+            cursor: pointer;
+
+        }
+        button:hover{
+            background-color: aqua;
+        }
+    </style>
+</body>
+</html>
